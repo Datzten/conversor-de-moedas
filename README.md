@@ -1,21 +1,39 @@
 # Conversor de Moedas
 
-Uma interface web simples para conversão de moedas, feita com HTML, CSS e JavaScript puro. A página permite informar um valor e escolher entre dólar americano (USD), euro (EUR) e libra esterlina (GBP), com uma apresentação de resultado em reais.
+Aplicação web para converter valores de dólares americanos (USD), euros (EUR) e libras esterlinas (GBP) para reais (BRL). A interface é feita com HTML, CSS e JavaScript, sem dependências ou etapa de build.
 
-> **Status:** o projeto ainda é um protótipo visual. A entrada do valor é formatada, mas a conversão e o envio do formulário ainda não estão implementados. O resultado exibido na página é apenas um exemplo estático.
+## Demonstração
 
-## Funcionalidades atuais
+![Conversor em funcionamento: US$ 100 convertidos para R$ 535,00](convert-template-main/img/conversor-em-funcionamento.png)
 
-- Interface para inserir um valor e selecionar USD, EUR ou GBP.
-- Formatação da entrada para aceitar números e um separador decimal.
-- Interface estilizada com CSS e imagens locais.
+## Funcionalidades
+
+- Conversão de USD, EUR e GBP para BRL.
+- Entrada de valores com vírgula ou ponto como separador decimal.
+- Exibição da taxa utilizada e do total em reais, formatados para o padrão brasileiro.
+- Resultado exibido na interface após cada conversão.
+
+### Taxas utilizadas
+
+As taxas estão definidas diretamente em `convert-template-main/scripts.js`:
+
+| Moeda | Taxa usada |
+| --- | ---: |
+| USD | R$ 5,35 |
+| EUR | R$ 6,40 |
+| GBP | R$ 7,80 |
+
+Esses valores são fixos e servem para demonstração; não são atualizados automaticamente nem consultados em uma API.
 
 ## Como executar
 
-Não é necessário instalar dependências nem fazer build:
+Não é necessário instalar nada. Abra `convert-template-main/index.html` em um navegador, informe um valor, escolha a moeda e clique em **Converter em reais**.
 
-1. Baixe ou clone este repositório.
-2. Abra `convert-template-main/index.html` no navegador.
+## Tecnologias
+
+- HTML
+- CSS
+- JavaScript
 
 ## Estrutura do projeto
 
@@ -30,17 +48,6 @@ Não é necessário instalar dependências nem fazer build:
         ├── bg.png
         ├── check.svg
         ├── chevron-down.svg
+        ├── conversor-em-funcionamento.png
         └── logo.svg
 ```
-
-## Tecnologias
-
-- HTML
-- CSS
-- JavaScript
-
-## Próximos passos
-
-- Implementar o cálculo de conversão e atualizar o resultado na tela.
-- Definir como as taxas de câmbio serão obtidas e atualizadas.
-- Validar os valores informados e tratar erros.
